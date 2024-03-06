@@ -29,7 +29,7 @@ for group_name in "${additional_groups[@]}"; do
         usermod -aG ${group_name:?} ${USER}
     fi
 done
-device_nodes=( /dev/uinput /dev/input/event* /dev/dri/* )
+device_nodes=( /dev/uinput /dev/input/event* /dev/dri/* /dev/snd/* )
 added_groups=""
 for dev in "${device_nodes[@]}"; do
     # Only process $dev if it's a character device
